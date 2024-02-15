@@ -1,0 +1,26 @@
+{
+    "ID": 123,
+    "Number": "GroupNumber",
+    "Year": 2,
+    "Students": [
+        {
+            "LastName": "LastName1",
+            "FirstName": "FirstName1",
+            "MiddleName": "MiddleName1",
+            "Rating": [
+                1,
+                2,
+                3
+            ]
+        },
+        {
+            "LastName": "LastName2",
+            "FirstName": "FirstName2",
+            "MiddleName": "MiddleName2",
+            "Rating": [
+                5,
+                3
+            ]
+        }
+    ]
+}

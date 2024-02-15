@@ -19,3 +19,10 @@
 
 # Go workspace file
 go.work
+
+# Idea files
+.idea/
+
+# Temporary files
+data/test.txt
+data/test.json
