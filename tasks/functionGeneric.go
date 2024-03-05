@@ -13,6 +13,17 @@ func calcSum[T Number](a, b T) T {
 	return res
 }
 
+func genericWithTypeCheck[T Number](a, b T) T {
+	switch any(a).(type) {
+	case int:
+		return a + b
+	case float64:
+		return a * b
+	default:
+		return a - b
+	}
+}
+
 type Stack[T any] struct {
 	data []T
 }
@@ -55,8 +66,11 @@ func main() {
 	fmt.Println(calcSum(1, 2))
 	fmt.Println(calcSum[int](1, 2)) // Use explicit type
 	fmt.Println(calcSum(1.5, 2.5))
-	fmt.Println(calcSum(1, 2.5))
-	fmt.Println(calcSum(1.5, 2))
+
+	fmt.Println("Testing generic functions with type checking")
+	fmt.Println(genericWithTypeCheck(2, 4))
+	fmt.Println(genericWithTypeCheck[int](2, 4)) // Use explicit type
+	fmt.Println(genericWithTypeCheck(1.5, 2.5))
 
 	fmt.Println("Testing generic types (Stack of any values")
 	stackAny := Stack[any]{}
